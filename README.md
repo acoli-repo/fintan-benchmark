@@ -1,4 +1,4 @@
-# Evaluation of SPARQL updates on partitioned RDF streams
+# Benchmark for SPARQL updates on partitioned RDF streams using Fintan
 
 ## Installation
 To execute the benchmark, please first follow the instructions in the respective install folders:
