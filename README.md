@@ -32,7 +32,7 @@ Results and statistics for multiple machines and configurations are included in 
 * Fäth C., Chiarcos C., Ebbrecht B., Ionov M. (2020), Fintan - Flexible, Integrated Transformation and Annotation eNgineering. In: Proceedings of the 12th Language Resources and Evaluation Conference. LREC 2020. pp 7212-7221.
 
 ## Licenses
-The repositories for Fintan are being published under multiple licenses. All native code and documentation falls under an Apache 2.0 license. [LICENSE.main](LICENSE.main.txt). The benchmark relies on data derived from [UniMorph](https://unimorph.github.io/) under CC BY-SA 3.0, see [LICENSE.data](LICENSE.data.txt). The OLiA annotation model for UniMorph is published under CC BY 3.0, see [LICENSE.olia](LICENSE.olia.txt)
+The repositories for Fintan are being published under multiple licenses. All native code and documentation falls under an Apache 2.0 license. [LICENSE.main](LICENSE.main.txt). The benchmark relies on data derived from [UniMorph](https://unimorph.github.io/) under CC BY-SA 3.0, see [LICENSE.data](LICENSE.data.txt). The OLiA annotation model for UniMorph is published under CC BY 3.0, see [LICENSE.olia](LICENSE.olia.txt).
 
 ### LICENSE.main (Apache 2.0)
 ```
