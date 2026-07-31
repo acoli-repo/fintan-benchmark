@@ -1,0 +1,46 @@
+{
+"input" : "<$param0>"
+, "output" : "result.ttl"
+, "modelQueueSize" : 200
+, "pipeline" : [ 
+
+	{ "componentInstance" : "ttlLoader"
+		, "class" : "RDFStreamLoader"
+		, "lang" : "ttl"
+		
+		, "delimiter" : "<$param2>"
+		, "delimiter_sample1" : ""
+		, "delimiter_sample2" : "###AVG#CORPUS#200tp##"
+		, "delimiter_sample3" : "###FULL#CORPUS#200K##"
+		
+		, "split" : true
+		, "globalPrefixes" : true
+	} ,
+	
+	{ "componentInstance" : "rdfUpdater"
+		, "class" : "RDFUpdater"
+		, "models" : [
+			{"source":"data/unimorph.owl", "graph":"http://purl.org/olia/unimorph.owl"}
+	    ]
+		, "updates" : [
+			{"path":"sparql/unimorph2lemon.sparql", "iter":"1"},
+			{"path":"sparql/linkFEATS.sparql", "iter":"1"}
+		]
+		, "threads" : "<$param1>"
+		, "threads_sample1" : "1"
+		, "threads_sample4" : "4"
+		, "threads_sample16" : "16"
+		, "threads_sample32" : "32"
+		, "threads_sample48" : "48"
+		, "threads_sample96" : "96"
+	} ,
+	
+	
+	{ "componentInstance" : "ttlWriter"
+		, "class" : "RDFStreamWriter"
+		, "lang" : "ttl"
+		, "delimiter" : ""
+		, "prefixDeduplication" : true
+	} 
+]
+}
